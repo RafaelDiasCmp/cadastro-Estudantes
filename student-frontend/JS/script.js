@@ -12,7 +12,7 @@ loadCourses();
 
 
 //Load all courses
-function loadCourses() { 
+function loadCourses() { //Carregamento de cursos na tabela
     $.ajax({
         url: "http://localhost:8080/courses", //AJAX para chamadas Síncronas
         type: "GET",
