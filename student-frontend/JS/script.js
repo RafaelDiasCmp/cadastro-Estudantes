@@ -55,7 +55,7 @@ function save() {
     //document.getElementById('formAlunos').reset(); // Resetando o formulário após salvar
 
 
-$.ajax({
+$.ajax({ //Carregamento dos alunos na tabela
     url: "http://localhost:8080/students",
     type: "POST",
     contentType: "application/json", //Servidor
