@@ -12,7 +12,7 @@ loadCourses();
 
 
 //Load all courses
-function loadCourses() {
+function loadCourses() { 
     $.ajax({
         url: "http://localhost:8080/courses", //AJAX para chamadas Síncronas
         type: "GET",
@@ -25,7 +25,8 @@ function loadCourses() {
         }
     });
 }
-function loadStudents() {
+
+    function loadStudents() { //Carregamento dos alunos na tabela
     $.getJSON("http://localhost:8080/students", (response) => {
         students = response;
         for (let stud of students) {
@@ -55,7 +56,7 @@ function save() {
     //document.getElementById('formAlunos').reset(); // Resetando o formulário após salvar
 
 
-$.ajax({ //Carregamento dos alunos na tabela
+$.ajax({ 
     url: "http://localhost:8080/students",
     type: "POST",
     contentType: "application/json", //Servidor
