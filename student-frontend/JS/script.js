@@ -45,8 +45,8 @@ function save() {
         name: document.getElementById('nome').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('telefone').value,
-        idCurso: document.getElementById('curso').value,
-        periodo: document.querySelector('input[name="turno"]:checked').value // Obtendo o valor do turno selecionado
+        idCurso: parseInt(document.getElementById('curso').value),
+        periodo: parseInt(document.querySelector('input[name="turnoSelect"]:checked').value) // Obtendo o valor do turno selecionado
     };
 
     //alunos.push(aluno); // Adicionando o aluno ao array
@@ -91,15 +91,34 @@ function addNewRow(stud) {
     cell.textContent = stud.phone;
     cell.className = "d-none d-md-table-cell";
 
-    //Curso
+    // Curso
+    var cursoText = "";
+    if (stud.idCurso === 1) {
+        cursoText = "Angular";
+    } else if (stud.idCurso === 2) {
+        cursoText = "Bootstrap";
+    } else if (stud.idCurso === 3) {
+        cursoText = "Git/GitHub";
+    }
+    
     var cell = newRow.insertCell();
-    cell.textContent = stud.idCurso;
+    cell.textContent = cursoText;
     cell.className = "d-none d-md-table-cell";
 
+    // Turno
+    var periodoText = "";
+    switch (stud.periodo) { //Verifica o tipo de valor recebido
+        case 1:
+            periodoText = "Manhã";
+            break;
+        case 2:
+            periodoText = "Tarde";
+            break;
+        case 3:
+            periodoText = "Noite";
+            break;
+    }
 
-    //Turno
     var cell = newRow.insertCell();
-    cell.textContent = stud.periodo;
-    cell.className = "d-none d-md-table-cell";
-
+    cell.textContent = periodoText;// inserir o turno na tabela 
 }

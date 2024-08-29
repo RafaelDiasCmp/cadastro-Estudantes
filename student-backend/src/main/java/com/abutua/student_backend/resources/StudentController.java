@@ -66,7 +66,7 @@ public class StudentController {
     // students.add(s3);
     // }
 
-    @PostMapping("students")
+    @PostMapping("students") //Botão Cadastrar/Salvar
     public ResponseEntity<Student> save(@RequestBody Student student) {
         student.setId(students.size() + 1);
         students.add(student);
