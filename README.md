@@ -11,9 +11,7 @@ Este projeto é um sistema de cadastro de estudantes construído usando **Java**
 ### Funcionalidades
 
 - **Cadastro de Estudantes:** Permite adicionar novos estudantes ao sistema com informações detalhadas.
-- **Edição de Informações:** Atualização de dados cadastrais de estudantes já registrados.
-- **Listagem de Estudantes:** Visualização de todos os estudantes cadastrados com opções de busca e filtragem.
-- **Remoção de Estudantes:** Funcionalidade para deletar estudantes do sistema.
+- **Listagem de Estudantes:** Visualização de todos os estudantes cadastrados.
 - **API RESTful:** Backend estruturado para comunicação eficiente com o frontend.
 
 ### Tecnologias Utilizadas
@@ -27,7 +25,6 @@ Este projeto é um sistema de cadastro de estudantes construído usando **Java**
 
 - **Backend:** Implementado com Java e Spring Boot, responsável pela lógica de negócios e gerenciamento de dados.
 - **Frontend:** Desenvolvido com JavaScript, HTML e CSS, proporcionando uma interface amigável e intuitiva para o usuário final.
-- **Banco de Dados:** Utilização de um banco de dados relacional para armazenamento das informações dos estudantes.
 
 
 
