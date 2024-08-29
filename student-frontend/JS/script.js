@@ -48,14 +48,6 @@ function save() {
         idCurso: parseInt(document.getElementById('curso').value),
         periodo: parseInt(document.querySelector('input[name="turnoSelect"]:checked').value) // Obtendo o valor do turno selecionado
     };
-
-    //alunos.push(aluno); // Adicionando o aluno ao array
-
-    //addNewRow(aluno); // Adicionando uma nova linha na tabela de alunos
-
-    //document.getElementById('formAlunos').reset(); // Resetando o formulário após salvar
-
-
 $.ajax({ 
     url: "http://localhost:8080/students",
     type: "POST",

@@ -2,12 +2,9 @@ package com.abutua.student_backend.resources;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 import java.util.Arrays;
-
 import com.abutua.student_backend.models.Course;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,8 +29,6 @@ public class CourseController {
         
 
     //Filtro para retornar status code correto
-    //200 se Sucesso
-    //404 se Error
         Course crs = courses.stream()
             .filter(c -> c.getId() == id)
             .findFirst()
