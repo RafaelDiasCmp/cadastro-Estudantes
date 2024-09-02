@@ -112,5 +112,6 @@ function addNewRow(stud) {
     }
 
     var cell = newRow.insertCell();
-    cell.textContent = periodoText;// inserir o turno na tabela 
+    cell.textContent = periodoText;// inserir o turno na tabela
+    cell.className = "d-none d-md-table-cell";
 }
